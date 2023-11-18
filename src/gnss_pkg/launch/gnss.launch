@@ -1,0 +1,12 @@
+<launch>
+    <node pkg="rosbag" type="play" name="player" output="screen" args="/home/ubuntu18/gnss_ws/2023-11-08-16-15-34.bag"/>
+    <!-- <node pkg="gnss_pkg"  type="driver_pub"                  name="location_publisher"  /> -->
+    <node pkg="gnss_pkg"  type="tf_convert"                   name="gps_to_enu_converter"  /> 
+    <node pkg="gnss_pkg"  type="show_path.py"             name="show_path"  /> 
+    <node pkg="gnss_pkg"  type="read_db.py"                  name="db_reader"  /> 
+    <node pkg="gnss_pkg"  type="convert2frenet.py"       name="frenet_coordinate"  /> 
+    <!-- 注意这里bag文件的路径必须为绝对路径-->
+    <!-- <node pkg="rviz" type="rviz" name="rviz"  />  -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d /home/ubuntu18/learning/gnss.rviz" /> 
+    
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/ubuntu18/gnss_ws/devel
+
+Name: gnss_pkg
+Description: Description of gnss_pkg
+Version: 0.0.0
+Cflags: -I/home/ubuntu18/gnss_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs roscpp rospy std_msgs tf2_ros message_runtime

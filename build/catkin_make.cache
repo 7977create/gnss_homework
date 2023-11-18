@@ -1,0 +1,2 @@
+gnss_pkg
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu18/gnss_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu18/gnss_ws/install -G Unix Makefiles
